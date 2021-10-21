@@ -1,0 +1,5 @@
+#! /bin/bash
+if [ $# != 0 ]; then
+  TESTSUITE='--filter '$1 
+fi
+docker-compose run phpunit phpunit . $TESTSUITE --testdox 
